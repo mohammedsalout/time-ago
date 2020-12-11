@@ -35,8 +35,8 @@ Example 1 : with String time
         AgoTime.getTimeAgo(context, string_time, formatter,server_time_zone);
 
         // the server millis time zone is the server time zone it will be positive or negative
-        // If server zone time is +2 then the he server millis time zone = 2h*60m*60s*10000 =  7200000
-        //If server zone time is -2 then the he server millis time zone = -2h*60m*60s*10000 = -7200000
+        // If server zone time is +2 then the  server millis time zone = 2h*60m*60s*10000 =  7200000
+        //If server zone time is -2 then the  server millis time zone = -2h*60m*60s*10000 = -7200000
 
 Example 2: usage with time as long  
 
