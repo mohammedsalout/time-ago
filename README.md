@@ -2,6 +2,9 @@
 
 [![](https://jitpack.io/v/mohammedsalout/time-ago.svg)](https://jitpack.io/#mohammedsalout/time-ago)
 
+![alt text]("")
+
+
 This library helps you to get the time in the form ( hour/min/second ago) , and it is easy to use
 
 The first step you need to add on build:gradle(project)
@@ -38,4 +41,7 @@ Example 2: usage with time as long
 
     int server_time_zone = 0;
     AgoTime.getTimeAgo(context, 1607535180000L , server_time_zone);
+
+
+
        
