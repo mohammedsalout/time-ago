@@ -42,6 +42,10 @@ Example 2: usage with time as long
     int server_time_zone = 0;
     AgoTime.getTimeAgo(context, 1607535180000L , server_time_zone);
 
+# The result 
+
+![](https://raw.githubusercontent.com/mohammedsalout/time-ago/main/output_example.png)
+
 
 
        
