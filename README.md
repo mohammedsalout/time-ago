@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/mohammedsalout/time-ago.svg)](https://jitpack.io/#mohammedsalout/time-ago)
 
-![]()
+![](https://raw.githubusercontent.com/mohammedsalout/time-ago/main/time_ago2.png)
 
 
 This library helps you to get the time in the form ( hour/min/second ago) , and it is easy to use
