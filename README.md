@@ -32,7 +32,7 @@ Example 1 : with String time
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.ENGLISH);
         String string_time = "2020-12-09T21:03:32.000000Z";
         int server_time_zone = 0;
-        AgoTime.getTimeAgo(context, string_time, formatter,server_time_zone);
+        GetTime.getTimeAgo(context, string_time, formatter,server_time_zone);
 
         // the server millis time zone is the server time zone it will be positive or negative
         // If server zone time is +2 then the  server millis time zone = 2h*60m*60s*10000 =  7200000
@@ -41,7 +41,7 @@ Example 1 : with String time
 Example 2: usage with time as long  
 
     int server_time_zone = 0;
-    AgoTime.getTimeAgo(context, 1607535180000L , server_time_zone);
+    GetTime.getTimeAgo(context, 1607535180000L , server_time_zone);
 
 # The result 
 
