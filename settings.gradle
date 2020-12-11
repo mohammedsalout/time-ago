@@ -1,0 +1,3 @@
+include ':GetTime'
+include ':app'
+rootProject.name = "AndroidTimeAgo"
