@@ -1,7 +1,5 @@
 # Get the time ago with Android app
 
-[![](https://jitpack.io/v/mohammedsalout/time-ago.svg)](https://jitpack.io/#mohammedsalout/time-ago)
-
 ![](https://raw.githubusercontent.com/mohammedsalout/time-ago/main/time_ago2.png)
 
 
@@ -18,6 +16,8 @@ The first step you need to add on build:gradle(project)
 
 
 Then implement the library using 
+[![](https://jitpack.io/v/mohammedsalout/time-ago.svg)](https://jitpack.io/#mohammedsalout/time-ago)
+
 
   	dependencies {
 	        implementation 'com.github.mohammedsalout:time-ago:Tag'
