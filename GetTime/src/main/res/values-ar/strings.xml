@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="just_now">الآن</string>
+    <string name="minutes_ago">"دقيقة "</string>
+    <string name="an_hour_ago">"ساعة "</string>
+    <string name="yesterday">الأمس</string>
+    <string name="days_ago">يوم</string>
+    <string name="a_minute_ago">منذ دقيقة</string>
+</resources>

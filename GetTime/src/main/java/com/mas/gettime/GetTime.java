@@ -94,7 +94,7 @@ public class GetTime {
         if (diff < MINUTE_MILLIS) {
             return context.getString(R.string.just_now);
         } else if (diff < 2 * MINUTE_MILLIS) {
-            return "a minute ago";
+            return context.getString(R.string.a_minute_ago);
         } else if (diff < 50 * MINUTE_MILLIS) {
             return diff / MINUTE_MILLIS + " " + context.getString(R.string.minutes_ago);
         } else if (diff < 90 * MINUTE_MILLIS) {
