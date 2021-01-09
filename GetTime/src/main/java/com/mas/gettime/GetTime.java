@@ -1,6 +1,8 @@
 package com.mas.gettime;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -119,4 +121,5 @@ public class GetTime {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH);
         return sdf.format(d);
     }
+
 }

@@ -6,4 +6,5 @@
     <string name="yesterday">الأمس</string>
     <string name="days_ago">يوم</string>
     <string name="a_minute_ago">منذ دقيقة</string>
+    <string name="since">منذ</string>
 </resources>
