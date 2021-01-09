@@ -93,21 +93,24 @@ public class GetTime {
     }
 
     private static String getTheTime(long diff, Context context, Long time) {
+
+        String since = context.getString(R.string.since);
+
         if (diff < MINUTE_MILLIS) {
             return context.getString(R.string.just_now);
         } else if (diff < 2 * MINUTE_MILLIS) {
             return context.getString(R.string.a_minute_ago);
         } else if (diff < 50 * MINUTE_MILLIS) {
-            return diff / MINUTE_MILLIS + " " + context.getString(R.string.minutes_ago);
+            return since + (diff / MINUTE_MILLIS) + " " + context.getString(R.string.minutes_ago);
         } else if (diff < 90 * MINUTE_MILLIS) {
-            return context.getString(R.string.an_hour_ago);
+            return since + context.getString(R.string.an_hour_ago);
         } else if (diff < 24 * HOUR_MILLIS) {
-            return diff / HOUR_MILLIS + " " + context.getString(R.string.an_hour_ago);
+            return since + (diff / HOUR_MILLIS) + " " + context.getString(R.string.an_hour_ago);
         } else if (diff < 48 * HOUR_MILLIS) {
-            return context.getString(R.string.yesterday);
+            return since + context.getString(R.string.yesterday);
         } else {
             if (diff / DAY_MILLIS <= 5) {
-                return diff / DAY_MILLIS + " " + context.getString(R.string.days_ago);
+                return since + (diff / DAY_MILLIS) + " " + context.getString(R.string.days_ago);
             } else {
                 return getDateString(time) + "";
             }
