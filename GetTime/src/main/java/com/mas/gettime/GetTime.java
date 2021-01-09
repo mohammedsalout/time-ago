@@ -94,7 +94,7 @@ public class GetTime {
 
     private static String getTheTime(long diff, Context context, Long time) {
 
-        String since = context.getString(R.string.since);
+        String since = context.getString(R.string.since)+" ";
 
         if (diff < MINUTE_MILLIS) {
             return context.getString(R.string.just_now);
