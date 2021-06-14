@@ -18,12 +18,13 @@ public class GetTime {
     private static final int MINUTE_MILLIS = 60 * SECOND_MILLIS;
     private static final int HOUR_MILLIS = 60 * MINUTE_MILLIS;
     private static final int DAY_MILLIS = 24 * HOUR_MILLIS;
-    static int zoneTime = TimeZone.getDefault().getOffset(new Date().getTime());
-    static Calendar currentCalender = Calendar.getInstance();
-    static  Calendar postCalender = Calendar.getInstance();
-
 
     public static String getTimeAgo(Context context, String timeString, DateFormat dateFormat, int server_millis_time_zone) {
+        int zoneTime = TimeZone.getDefault().getOffset(new Date().getTime());
+        Calendar currentCalender = Calendar.getInstance();
+        Calendar postCalender = Calendar.getInstance();
+
+
         //2020-11-24T22:17:20
         String str_date = timeString.replace(".000000Z", "");
         Date date = null;
@@ -50,6 +51,9 @@ public class GetTime {
     }
 
     public static String getTimeAgo(Context context, Long millis_time, int server_millis_time_zone) {
+        int zoneTime = TimeZone.getDefault().getOffset(new Date().getTime());
+        Calendar currentCalender = Calendar.getInstance();
+
         long now = currentCalender.getTimeInMillis();
         long time;
         if (zoneTime == server_millis_time_zone) {
