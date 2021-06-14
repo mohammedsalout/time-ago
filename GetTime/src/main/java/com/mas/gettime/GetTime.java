@@ -18,59 +18,38 @@ public class GetTime {
     private static final int MINUTE_MILLIS = 60 * SECOND_MILLIS;
     private static final int HOUR_MILLIS = 60 * MINUTE_MILLIS;
     private static final int DAY_MILLIS = 24 * HOUR_MILLIS;
+    static int zoneTime = TimeZone.getDefault().getOffset(new Date().getTime());
+    static Calendar currentCalender = Calendar.getInstance();
+    static  Calendar postCalender = Calendar.getInstance();
 
 
     public static String getTimeAgo(Context context, String timeString, DateFormat dateFormat, int server_millis_time_zone) {
         //2020-11-24T22:17:20
-        String agoTime = "";
-
         String str_date = timeString.replace(".000000Z", "");
-
-        // DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         Date date = null;
         try {
             date = (Date) dateFormat.parse(str_date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         // =============================================
-        Calendar currentCalender = Calendar.getInstance();
-        TimeZone tz = currentCalender.getTimeZone();
-        int zoneTime = (tz.getRawOffset());
-
         long now = currentCalender.getTimeInMillis();
-
-        Calendar postCalender = Calendar.getInstance();
+        assert date != null;
         postCalender.setTime(date);
         long time;
-
         if (zoneTime == server_millis_time_zone) {
             time = date.getTime();
         } else {
             time = date.getTime() + zoneTime;
         }
-
         // TODO: localize
         final long diff = now - time;
 
-
         //==============================================
-
-        //return PrettyTimeAgo.getTimeAgo(date.getTime() + zoneTime);
-
         return getTheTime(diff, context, time);
-
     }
 
     public static String getTimeAgo(Context context, Long millis_time, int server_millis_time_zone) {
-        //2020-11-24T22:17:20
-        // =============================================
-
-        Calendar currentCalender = Calendar.getInstance();
-        TimeZone tz = currentCalender.getTimeZone();
-        int zoneTime = (tz.getRawOffset());
-
         long now = currentCalender.getTimeInMillis();
         long time;
         if (zoneTime == server_millis_time_zone) {
@@ -80,21 +59,15 @@ public class GetTime {
 
         }
 
-
         // TODO: localize
         final long diff = now - time;
-
-        //==============================================
-
-        //return PrettyTimeAgo.getTimeAgo(date.getTime() + zoneTime);
 
         return getTheTime(diff, context, time);
 
     }
 
     private static String getTheTime(long diff, Context context, Long time) {
-
-        String since = context.getString(R.string.since)+" ";
+        String since = context.getString(R.string.since) + " ";
 
         if (diff < MINUTE_MILLIS) {
             return context.getString(R.string.just_now);
